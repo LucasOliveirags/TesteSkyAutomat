@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.1 on win32)" generated="20211212 22:32:36.123" rpa="false" schemaversion="2">
+<suite id="s1" name="MeuTeste" source="C:\RobotFramework\Testesky\SiteSky\MeuTeste.robot">
+<test id="s1-t1" name="Caso de Teste 01: Acessar a lista de canais">
+<kw name="Acessar o site" library="SkyResource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211212 22:32:36.272" level="INFO">Opening browser 'chrome' to base url 'https://www.sky.com.br/'.</msg>
+<status status="PASS" starttime="20211212 22:32:36.272" endtime="20211212 22:32:38.532"/>
+</kw>
+<status status="PASS" starttime="20211212 22:32:36.272" endtime="20211212 22:32:38.532"/>
+</kw>
+<kw name="Clicar no botão X" library="SkyResource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${ButtonX}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211212 22:32:38.533" level="INFO">Clicking button 'class: close'.</msg>
+<status status="PASS" starttime="20211212 22:32:38.533" endtime="20211212 22:32:39.119"/>
+</kw>
+<status status="PASS" starttime="20211212 22:32:38.532" endtime="20211212 22:32:39.120"/>
+</kw>
+<kw name="Clicar no botão Programação" library="SkyResource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AbaProgramacao}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211212 22:32:39.120" level="INFO">Clicking element 'xpath://*[@id="main-menu"]/div[2]/div[2]/ul[1]/li[3]/a/strong'.</msg>
+<status status="PASS" starttime="20211212 22:32:39.120" endtime="20211212 22:32:41.191"/>
+</kw>
+<status status="PASS" starttime="20211212 22:32:39.120" endtime="20211212 22:32:41.191"/>
+</kw>
+<kw name="Clicar no botão Lista de canais" library="SkyResource">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>$(document).scrollTop(${800})</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20211212 22:32:41.193" level="INFO">Executing JavaScript:
+$(document).scrollTop(800)
+Without any arguments.</msg>
+<status status="PASS" starttime="20211212 22:32:41.192" endtime="20211212 22:32:41.219"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BtnListCanais}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211212 22:32:41.219" level="INFO">Clicking button 'css: a.btn.btn-title-no-background.pull-right'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211212 22:32:41.487" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211212 22:32:41.262" endtime="20211212 22:32:41.487"/>
+</kw>
+<msg timestamp="20211212 22:32:41.488" level="FAIL">Button with locator 'css: a.btn.btn-title-no-background.pull-right' not found.</msg>
+<status status="FAIL" starttime="20211212 22:32:41.219" endtime="20211212 22:32:41.489"/>
+</kw>
+<status status="FAIL" starttime="20211212 22:32:41.192" endtime="20211212 22:32:41.489"/>
+</kw>
+<status status="FAIL" starttime="20211212 22:32:36.271" endtime="20211212 22:32:41.490">Button with locator 'css: a.btn.btn-title-no-background.pull-right' not found.</status>
+</test>
+<status status="FAIL" starttime="20211212 22:32:36.124" endtime="20211212 22:32:41.491"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="MeuTeste">MeuTeste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
